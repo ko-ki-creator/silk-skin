@@ -1,0 +1,138 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Hiragino Mincho Pro", serif;
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #333333;
+    --dark-purple: #B3189C;
+    --yellow: #CDA93C
+
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sp {
+    display: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+
+/* -----------------------メインビジュアル */
+.header-wrapper {
+    position: relative;
+}
+
+.header-inner {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top-logo {
+    width: fit-content;
+    position: relative;
+    top: 10px;
+    left: 30px;
+
+    a {
+        color: var(--dark-purple);
+        font-size: 54px;
+        font-family: "Arsenal", serif;
+    }
+}
+
+.header-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.catch-copy {
+    width: 100%;
+    margin-bottom: 30px;
+
+    .above {
+        color: var(--black);
+        font-size: 53px;
+        line-height: 1em;
+
+        span {
+            color: var(--dark-purple);
+            font-size: 63px;
+        }
+    }
+
+    .under {
+        color: var(--black);
+        font-size: 63px;
+        line-height: 2em;
+
+        span {
+            color: var(--dark-purple);
+            font-size: 110px;
+            font-family: "Arsenal", serif;
+        }
+    }
+}
+
+.sub-copy {
+    text-align: center;
+    margin-bottom: 40px;
+
+    p {
+        font-size: 30px;
+    }
+
+    img {
+        width: 640px;
+        margin: -20px auto 0;
+    }
+}
+
+.mv-btn {
+
+    a {
+        color: var(--white);
+        font-size: 24px;
+        font-weight: bold;
+        display: inline-block;
+        border: 3px solid;
+        border-image: linear-gradient(to right, #B3189C, #FF2BDF) 1;
+        background: linear-gradient(0deg, #FF2BDF 0%, #B3189C 100%);
+        padding: 20px 40px;
+
+        &::after {
+            content: url(/images/cta-btn-arrow.png);
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+}
