@@ -43,14 +43,22 @@ button {
     background: none;
 }
 
+.sp {
+    display: none;
+}
+
 
 /* -----------------------メインビジュアル */
-.header-wrapper {
-    position: relative;
+.mv_back {
+    position: absolute;
+    width: 100%;
+    height: 845px;
+    object-fit: cover;
 }
 
 .header-inner {
     width: 100%;
+    height: 845px;
     position: absolute;
     top: 0;
     left: 0;
@@ -59,20 +67,46 @@ button {
 .top-logo {
     width: fit-content;
     position: relative;
-    top: 10px;
+    top: 20px;
     left: 30px;
 
     a {
         color: var(--dark-purple);
         font-size: 54px;
+        line-height: 1em;
         font-family: "Arsenal", serif;
     }
 }
 
+/* メインビジュアル左写真 */
+.mv-left {
+    width: 20%;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    z-index: 10;
+}
+
+/* メインビジュアル右写真 */
+.mv-right {
+    width: 20%;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    z-index: 10;
+}
+
 .header-content {
+    display: grid;
+    place-content: center;
     width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    height: 845px;
+    position: relative;
+    z-index: 20;
 }
 
 .catch-copy {
@@ -81,23 +115,22 @@ button {
 
     .above {
         color: var(--black);
-        font-size: 53px;
-        line-height: 1em;
+        font-size: clamp(1.875rem, 1.369rem + 2.16vw, 3.313rem);
 
         span {
             color: var(--dark-purple);
-            font-size: 63px;
+            font-size: clamp(2.25rem, 1.656rem + 2.54vw, 3.938rem);
         }
     }
 
     .under {
         color: var(--black);
-        font-size: 63px;
+        font-size: clamp(1.875rem, 1.149rem + 3.1vw, 3.938rem);
         line-height: 2em;
 
         span {
             color: var(--dark-purple);
-            font-size: 110px;
+            font-size: clamp(5.813rem, 5.438rem + 1.6vw, 6.875rem);
             font-family: "Arsenal", serif;
         }
     }
@@ -108,16 +141,18 @@ button {
     margin-bottom: 40px;
 
     p {
-        font-size: 30px;
+        font-size: clamp(1.313rem, 1.114rem + 0.85vw, 1.875rem);
     }
 
     img {
-        width: 640px;
+        width: 650px;
+        height: 20px;
         margin: -20px auto 0;
     }
 }
 
 .mv-btn {
+    text-align: center;
 
     a {
         color: var(--white);
@@ -128,11 +163,173 @@ button {
         border-image: linear-gradient(to right, #B3189C, #FF2BDF) 1;
         background: linear-gradient(0deg, #FF2BDF 0%, #B3189C 100%);
         padding: 20px 40px;
+        transition-duration: .4s;
 
         &::after {
             content: url(/images/cta-btn-arrow.png);
             display: inline-block;
             margin-left: 20px;
         }
+
+        &:hover {
+            transform: scale(0.95);
+        }
     }
+}
+
+/* キラッと効果 */
+.btn_shining {
+    position: relative;
+    overflow: hidden;
+}
+.btn_shining::after {
+    content: '';
+    display: block;
+    position: absolute;
+	left: -50px; top: 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0) 90%);
+	width: 40px;
+    height: 100%;
+    transform: skew(-20deg, 0);
+    opacity: 0;
+    animation: anime_shining 5s infinite;
+}
+@keyframes anime_shining {
+    0% {
+        left: -50px;
+        opacity: 0;
+    }
+    5% {
+        opacity: 0;
+    }
+    8% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    40% {
+        left: 110%;
+    }
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+.mv-scroll {
+    transform: rotate(90deg);
+    width: fit-content;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    p {
+        font-size: 16px;
+        color: #666666;
+        letter-spacing: 0.2em;
+    }
+
+    img {
+        width: 100px;
+        height: 10px;
+    }
+}
+
+
+/* -----------------------サービス */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------
+SP
+-------------------------- */
+@media screen and (max-width: 767px) {
+    .sp {
+        display: block;
+    }
+
+    /* -----------------------メインビジュアル */
+
+    .top-logo {
+        top: 50px;
+        left: 15px;
+
+        a {
+            font-size: 30px;
+        }
+    }
+
+    .mv-left {
+        width: 35%;
+        left: 0;
+        opacity: 0.4;
+    }
+
+    .mv-right {
+        width: 35%;
+        right: 0;
+        opacity: 0.4;
+    }
+
+    .above {
+        text-align: center;
+    }
+
+    .under {
+        text-align: center;
+    }
+
+    .sub-copy {
+        img {
+            padding: 0 15px;
+        }
+    }
+
+    .mv-btn {
+        a {
+            font-size: 18px;
+        }
+    }
+
+    .mv-scroll {
+        p {
+            font-size: 12px;
+        }
+
+        img {
+            width: 80px;
+            height: 8px;
+        }
+    }
+
+
 }
