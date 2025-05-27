@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- slickのCSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,7 +35,7 @@
                         <img src="images/mv-wave.png" alt="">
                     </div>
                     <div class="mv-btn btn_shining">
-                        <a href="#">今すぐ無料相談を申し込む</a>
+                        <a href="#contact">今すぐ無料相談を申し込む</a>
                     </div>
                 </div>
                 <div class="mv-scroll">
@@ -44,17 +48,20 @@
 
     <main>
         <!-- サービス -->
-        <section class="service">
+        <section class="service" id="service">
             <div class="service-wrapper">
                 <div class="wrapper">
                     <div class="service-inner">
                         <div class="service-left">
                             <h2>最新の技術とプロのケアで、<br>完璧な美肌をサポート</h2>
+                            <p class="sp">
+                                SilkSkinは、痛みが少なく効果が長続きする最新のレーザー脱毛技術を導入しています。経験豊富なスタッフが、お客様一人ひとりに合わせたカウンセリングと施術を提供し、完全予約制のプライベート空間でリラックスして施術を受けていただけます。
+                            </p>
                             <img src="images/service-img2.png" alt="">
                         </div>
                         <div class="service-right">
                             <img src="images/service-img1.png" alt="">
-                            <p>
+                            <p class="pc">
                                 SilkSkinは、痛みが少なく効果が長続きする最新のレーザー脱毛技術を導入しています。経験豊富なスタッフが、お客様一人ひとりに合わせたカウンセリングと施術を提供し、完全予約制のプライベート空間でリラックスして施術を受けていただけます。
                             </p>
                         </div>
@@ -64,10 +71,500 @@
             </div>
         </section>
 
+        <!-- お悩み -->
+        <section class="problem" id="problem">
+            <div class="problem-wrapper">
+                <div class="problem-back">
+                    <img class="" src="images/problem-back.png" alt="">
+                </div>
+                <div class="problem-inner">
+                    <div class="problem-container">
+                        <div class="problem-heading">
+                            <h2>あなたにもこんな<br class="sp"><span>お悩み</span>を抱えていませんか？</h2>
+                            <img src="images/problem-heading.png" alt="">
+                        </div>
+                        <div class="problem-content">
+                            <div class="problem-item">
+                                <p><span>自己処理が面倒</span>で、時間がかかる...</p>
+                            </div>
+                            <div class="problem-item item2">
+                                <p><span>カミソリ負け</span>や<span>肌荒れ</span>に悩んでいる...</p>
+                            </div>
+                            <div class="problem-item item3">
+                                <p>エステでの<span>脱毛効果が<br class="sp">感じられなかった...</span></p>
+                            </div>
+                            <div class="problem-item item4">
+                                <p><span>脱毛施術が痛い</span>と聞いて、<br class="sp">不安を感じている...</p>
+                            </div>
+                            <div class="problem-item item5">
+                                <p><span>ムダ毛</span>が気になり、<br class="sp">自信を持っておしゃれを楽しめない...</p>
+                            </div>
+                            <div class="problem-item item6">
+                                <p>男性の目線が気になって、<br class="sp"><span>肌を出すことに抵抗</span>がある...</p>
+                            </div>
+                        </div>
+                        <img class="problem-img1" src="images/problem-img1.png" alt="">
+                        <img class="problem-img2" src="images/problem-img2.png" alt="">
+                        <img class="problem-arrow" src="images/problem-arrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 解決 -->
+        <section class="solution" id="solution">
+            <div class="solution-wrapper">
+                <img class="solution-back" src="images/solution-back.png" alt="">
+                <div class="wrapper">
+                    <div class="solution-inner">
+                        <div class="solution-heading">
+                            <h2><span>SilkSkin</span>で、<br class="sp">あなたの悩みを解決します！</h2>
+                        </div>
+                        <div class="solution-container">
+                            <div class="solution-content-left">
+                                <div class="solution-content-back"></div>
+                                <div class="solution-content-flex">
+                                    <p class="solution-text01">最新のレーザー技術で、短時間で効果的な脱毛が可能です。定期的な自己処理の必要がなくなり、日常生活が楽になります。</p>
+                                    <img src="images/solution-img1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="solution-content-right">
+                                <div class="solution-content-back"></div>
+                                <div class="solution-content-flex">
+                                    <img src="images/solution-img2.png" alt="">
+                                    <p class="solution-text02">SilkSkinの施術は肌に優しく、施術後もスベスベの肌をキープ。肌荒れやカミソリ負けとはもうさよならです。</p>
+                                </div>
+                            </div>
+                            <div class="solution-content-left">
+                                <div class="solution-content-back"></div>
+                                <div class="solution-content-flex">
+                                    <p class="solution-text03">当サロンでは、効果が高いとされる最新の脱毛機器を使用。少ない回数で確かな効果を実感いただけます。</p>
+                                    <img src="images/solution-img3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="solution-content-right">
+                                <div class="solution-content-back"></div>
+                                <div class="solution-content-flex">
+                                    <img src="images/solution-img4.png" alt="">
+                                    <p class="solution-text04">SilkSkinのレーザー脱毛は痛みが少なく、初めての方でも安心して施術を受けていただけます。</p>
+                                </div>
+                            </div>
+                            <div class="solution-content-left">
+                                <div class="solution-content-back"></div>
+                                <div class="solution-content-flex">
+                                    <p class="solution-text05">滑らかな肌を手に入れて、自信を持って肌を露出できるようになります。おしゃれの幅が広がります。</p>
+                                    <img src="images/solution-img5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="solution-content-right">
+                                <div class="solution-content-back"></div>
+                                <div class="solution-content-flex">
+                                    <img src="images/solution-img6.png" alt="">
+                                    <p class="solution-text06">SilkSkinのプライベートな空間で、安心して施術を受けられます。あなたのペースで理想の肌を手に入れましょう。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-wrapper">
+                <img class="cta-back" src="images/cta-back.png" alt="">
+                <div class="cta-inner">
+                    <h2>今すぐ理想の肌を<br class="sp">手に入れましょう！</h2>
+                    <p>
+                        SilkSkinの無料相談を受けて、あなたに最適な脱毛プランを見つけましょう。<br>
+                        今なら初回限定特典として、初回施術が10%オフになります。お早めにご予約ください。
+                    </p>
+                    <div class="cta-btn">
+                        <p>今なら初回<br><span>10%OFF</span></p>
+                        <div class="btn btn_shining">
+                            <a href="#">無料相談を申込</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お客様の声 -->
+        <section class="voice" id="voice">
+            <div class="voice-wrapper">
+                <img class="voice-back" src="images/voice-back.png" alt="">
+                <div class="wrapper">
+                    <div class="voice-inner">
+                        <h2>お客様の声 - <br class="sp">SilkSkinを選んだ理由</h2>
+                        <div class="voice-container">
+                            <div class="voice-content-right">
+                                <img src="images/voice-img1.png" alt="">
+                                <div class="voice-group">
+                                    <div class="voice-flex">
+                                        <h3>VOICE<span>01</span></h3>
+                                        <p>M.K（25歳　全身脱毛）</p>
+                                    </div>
+                                    <p>
+                                        痛みが少なく、スタッフの対応が素晴らしい。<br class="pc">
+                                        毎回安心して通えます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="voice-content-left">
+                                <img src="images/voice-img2.png" alt="">
+                                <div class="voice-group">
+                                    <div class="voice-flex">
+                                        <h3>VOICE<span>02</span></h3>
+                                        <p>T.S（32歳　部分脱毛）</p>
+                                    </div>
+                                    <p>
+                                        施術後の肌が滑らかになり、<br class="pc sp">
+                                        とても満足しています。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="voice-content-right">
+                                <img src="images/voice-img3.png" alt="">
+                                <div class="voice-group">
+                                    <div class="voice-flex">
+                                        <h3>VOICE<span>03</span></h3>
+                                        <p>Y.A（28歳　フェイシャル脱毛）</p>
+                                    </div>
+                                    <p>
+                                        顔のムダ毛がなくなり、<br class="pc">
+                                        化粧のノリが劇的に良くなりました。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="voice-content-left">
+                                <img src="images/voice-img4.png" alt="">
+                                <div class="voice-group">
+                                    <div class="voice-flex">
+                                        <h3>VOICE<span>04</span></h3>
+                                        <p>K.N（30歳　全身脱毛）</p>
+                                    </div>
+                                    <p>
+                                        サロンの雰囲気が良く、<br class="pc sp">
+                                        リラックスして施術を受けられます。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="voice-content-right">
+                                <img src="images/voice-img5.png" alt="">
+                                <div class="voice-group">
+                                    <div class="voice-flex">
+                                        <h3>VOICE<span>05</span></h3>
+                                        <p>R.I（22歳　部分脱毛）</p>
+                                    </div>
+                                    <p>
+                                        効果がすぐに現れ、とても驚きました。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="voice-content-left">
+                                <img src="images/voice-img6.png" alt="">
+                                <div class="voice-group">
+                                    <div class="voice-flex">
+                                        <h3>VOICE<span>06</span></h3>
+                                        <p>H.Y（40歳　全身脱毛）</p>
+                                    </div>
+                                    <p>
+                                        年齢を重ねても、<br class="pc sp">
+                                        しっかりとした効果を実感できて嬉しいです。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- プラン -->
+        <section class="plan" id="plan">
+            <div class="wrapper">
+                <div class="plan-inner">
+                    <div class="plan-heading">
+                        <h2>あなたに最適なプランをご提案</h2>
+                        <p>
+                            SilkSkinでは、お客様のニーズに合わせた多彩な施術メニューをご用意しています。<br>
+                            各メニューには初回割引やお得なキャンペーンもございます。
+                        </p>
+                    </div>
+                    <div class="plan-container">
+                        <div class="plan-flex">
+                            <div class="plan-content">
+                                <img src="images/plan-img1.png" alt="">
+                                <div class="plan-price">
+                                    <h3>全身脱毛</h3>
+                                    <p>通常料金　<span>198,000</span>円(税込)</p>
+                                    <div class="first-price">
+                                        <img src="images/plan-arrow.png" alt="">
+                                        <p>初回料金 <span>178,000</span>円(税込)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plan-content">
+                                <img src="images/plan-img2.png" alt="">
+                                <div class="plan-price">
+                                    <h3>部分脱毛 (腕・脚・背中など)</h3>
+                                    <p>通常料金　<span>98,000</span>円(税込)</p>
+                                    <div class="first-price">
+                                        <img src="images/plan-arrow.png" alt="">
+                                        <p>初回料金 <span>88,000</span>円(税込)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-flex">
+                            <div class="plan-content">
+                                <img src="images/plan-img3.png" alt="">
+                                <div class="plan-price">
+                                    <h3>フェイシャル脱毛</h3>
+                                    <p>通常料金　<span>58,000</span>円(税込)</p>
+                                    <div class="first-price">
+                                        <img src="images/plan-arrow.png" alt="">
+                                        <p>初回料金 <span>52,000</span>円(税込)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="plan-content">
+                                <img src="images/plan-img4.png" alt="">
+                                <div class="plan-price">
+                                    <h3>VIO脱毛</h3>
+                                    <p>通常料金　<span>78,000</span>円(税込)</p>
+                                    <div class="first-price">
+                                        <img src="images/plan-arrow.png" alt="">
+                                        <p>初回料金 <span>68,000</span>円(税込)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>※詳細な料金については無料相談にてご確認ください。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問 -->
+        <section class="faq" id="faq">
+            <div class="faq-wrapper">
+                <img class="faq-back" src="images/faq-back.png" alt="">
+                <div class="wrapper">
+                    <div class="faq-inner">
+                        <h2>よくある質問</h2>
+                        <div class="faq-container">
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">脱毛施術は痛いですか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">SilkSkinでは、最新のレーザー技術を使用し、ほとんど痛みを感じません。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">施術はどのくらいの時間がかかりますか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">全身脱毛の場合、約90分ほどです。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">何回くらい通えば効果が出ますか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">6～8回の施術で効果を実感する方が多いです。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">男性も利用できますか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">もちろんです。男性のお客様も多くご利用いただいています。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">未成年でも利用できますか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">保護者の同意があればご利用可能です。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">支払い方法は？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">クレジットカード、銀行振込、現金でのお支払いが可能です。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">予約のキャンセルはできますか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">予約の24時間前まで無料でキャンセル可能です。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">衛生面は大丈夫ですか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">徹底した衛生管理を行っており、常に清潔な環境で施術を受けられます。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">施術後のケアについて教えてください。</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">施術後は、保湿をしっかりと行い、直射日光を避けることをおすすめしています。</p>
+                                </div>
+                            </div>
+                            <div class="faq-content">
+                                <div class="question">
+                                    <p class="q">Q</p>
+                                    <p class="q-text">当日に何か持参するものはありますか？</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="a">A</p>
+                                    <p class="a-text">特にありませんが、普段お使いのスキンケアアイテムがあればお持ちいただくと安心です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <div class="contact-inner">
+                    <div class="contact-heading">
+                        <h2>無料相談であなたに<br class="sp">ぴったりのプランを</h2>
+                        <p>
+                            SilkSkinでは、お客様一人ひとりに最適な脱毛プランをご提案します。<br>
+                            以下のフォームに必要事項をご記入の上、お申し込みください。<br>
+                            今なら初回限定の特典もご利用いただけます。
+                        </p>
+                    </div>
+                    <form>
+                        <div class="form-wrapper">
+                            <div class="form-inner">
+                                <div class="form-content">
+                                    <p class="required">お名前</p>
+                                    <label>
+                                        <input type="text" name="name" class="form-text" placeholder="山田太郎" required>
+                                    </label>
+                                </div>
+                                <div class="form-content">
+                                    <p class="required">電話番号</p>
+                                    <label>
+                                        <input type="text" name="tel" class="form-text" placeholder="00011112222" required>
+                                    </label>
+                                </div>
+                                <div class="form-content">
+                                    <p class="required">メールアドレス</p>
+                                    <label>
+                                        <input type="text" name="mail" class="form-text" placeholder="example@mail.com" required>
+                                    </label>
+                                </div>
+                                <div class="form-content">
+                                    <p class="required">希望の相談日時</p>
+                                    <label>
+                                        <p class="date">第1希望</p>
+                                        <input type="date" name="today" class="form-text" required id="today">
+                                    </label>
+                                    <label>
+                                        <p class="date">第2希望</p>
+                                        <input type="date" name="tomorrow" class="form-text" id="tomorrow">
+                                    </label>
+                                </div>
+                                <div class="form-content">
+                                    <p class="any">ご相談内容</p>
+                                    <textarea name="textarea" placeholder="ご入力ください"></textarea>
+                                </div>
+                                <p>※ご希望の日程が取れない場合、代替の日程をご案内いたします</p>
+                                <button class="submit-btn">
+                                    <input type="submit" value="送信">
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="footer-wrapper">
+            <img class="footer-back" src="images/footer-back.png" alt="">
+            <div class="wrapper">
+                <div class="footer-inner">
+                    <div class="footer-logo">
+                        <a href="#">Silk Skin</a>
+                    </div>
+                    <div class="footer-container">
+                        <div class="company">
+                            <p>所在地：東京都千代田区神田神保町0丁目00-00</p>
+                            <p>連絡先：00-1234-5678</p>
+                            <p>営業時間：10:00〜20:00</p>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">ホーム</a></li>
+                                <li><a href="#service">サービス</a></li>
+                                <li><a href="#plan">料金</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#contact">お問い合わせ</a></li>
+                            </ul>
+                            <div class="sns-link">
+                                <a href="https://www.facebook.com/?locale=ja_JP">
+                                    <img src="images/facebook-icon.png" alt="">
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <img src="images/instagram-icon.png" alt="">
+                                </a>
+                                <a href="https://x.com/">
+                                    <img src="images/x-icon.png" alt="">
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                    <p class="copyright">©︎ 2024 SilkSkin All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="start">
+        <p>SilkSkin</p>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
