@@ -1406,7 +1406,7 @@ SP
 
     /* -----------------------解決 */
     .solution-back {
-        min-height: 1370px;
+        height: 1370px;
     }
 
     .solution-inner {
