@@ -475,7 +475,7 @@ button {
 
 .solution-back {
     width: 100%;
-    min-height: 1520px;
+    height: 1520px;
     object-fit: cover;
     position: relative;
     z-index: 1;
