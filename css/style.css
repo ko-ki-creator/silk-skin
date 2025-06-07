@@ -55,9 +55,9 @@ button {
 	top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 	height: 100%;
-	width: 100%;
-	z-index: 9000;
+	z-index: 999;
 
     p {
         position: fixed;
@@ -79,6 +79,34 @@ button {
 #faq,
 #contact {
     scroll-margin-top: 100px;
+}
+
+/* スクロールCSS */
+.fade-in {
+    opacity: 0;
+    transition-duration: .8s;
+    transition-property: opacity, transform;
+}
+
+.fade-in-up {
+    transform: translate(0, 50px);
+}
+
+.fade-in-down {
+    transform: translate(0, -50px);
+}
+
+.fade-in-left {
+    transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+    transform: translate(50px, 0);
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 
@@ -1753,6 +1781,12 @@ ul {
 
         a {
             color: var(--black);
+            transition-duration: .4s;
+
+            &:hover {
+                color: var(--dark-purple);
+                font-weight: 600;
+            }
         }
     }
 }
