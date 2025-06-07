@@ -6,10 +6,10 @@ $(function() {
 	setTimeout(function(){
 		$('.start').fadeOut(500);
 	},2000); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
-<<<<<<< HEAD
 });
 
 
+// セクションフェードイン
 jQuery(function ($) {
 	var fadeIn = $('.fade-in');
 	$(window).scroll(function () {
@@ -22,6 +22,4 @@ jQuery(function ($) {
 			}
 		});
 	});
-=======
->>>>>>> bc4cead197cdfaa7d3db3d847b3694e9dc2cf063
 });

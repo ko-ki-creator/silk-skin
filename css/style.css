@@ -68,7 +68,7 @@ button {
         z-index: 9999;
         width: 280px;
         color: var(--dark-purple);
-        font-size: 126px;
+        font-size: clamp(1.875rem, -0.238rem + 9.01vw, 7.875rem);
         line-height: 1em;
         font-family: "Arsenal", serif;
     }
@@ -1227,6 +1227,11 @@ ul {
 
         a {
             color: var(--black);
+            transition-duration: .4s;
+
+            &:hover {
+                color: var(--dark-purple);
+            }
         }
     }
 }
@@ -1783,12 +1788,6 @@ SP
 
             a {
                 color: var(--black);
-                transition-duration: .4s;
-
-                &:hover {
-                    color: var(--dark-purple);
-                    font-weight: 600;
-                }
             }
         }
     }
