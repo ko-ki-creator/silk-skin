@@ -2,8 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+/* * {
+	outline: 1px solid magenta;
+} */
+
 body {
     font-family: "Hiragino Mincho Pro", serif;
+}
+
+.wrap {
     overflow-x: hidden;
 }
 
@@ -57,19 +64,20 @@ button {
     transform: translate(-50%, -50%);
 	height: 100%;
 	width: 100%;
-	z-index: 9000;
+	z-index: 999;
 
-    p {
+    .js-opening {
         position: fixed;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         display: none;
-        z-index: 9999;
+        z-index: 999;
         width: 280px;
         color: var(--dark-purple);
         font-size: clamp(1.875rem, -0.238rem + 9.01vw, 7.875rem);
         line-height: 1em;
+        text-align: center;
         font-family: "Arsenal", serif;
     }
 }

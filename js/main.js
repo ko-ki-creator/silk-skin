@@ -1,7 +1,7 @@
 // オープニング
 $(function() {
 	setTimeout(function(){
-		$('.start p').fadeIn(1600);
+		$('.js-opening').fadeIn(1600);
 	},400); //0.4秒後にロゴをフェードイン!
 	setTimeout(function(){
 		$('.start').fadeOut(500);
@@ -11,12 +11,12 @@ $(function() {
 
 // セクションフェードイン
 jQuery(function ($) {
-	var fadeIn = $('.fade-in');
+	const fadeIn = $('.fade-in');
 	$(window).scroll(function () {
 		$(fadeIn).each(function () {
-			var offset = $(this).offset().top;
-			var scroll = $(window).scrollTop();
-			var windowHeight = $(window).height();
+			const offset = $(this).offset().top;
+			const scroll = $(window).scrollTop();
+			const windowHeight = $(window).height();
 			if (scroll > offset - windowHeight + 150) {
 				$(this).addClass("scroll-in");
 			}
