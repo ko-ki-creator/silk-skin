@@ -23,3 +23,33 @@ jQuery(function ($) {
 		});
 	});
 });
+
+
+// 初期表示時の文字色変更
+$(window).on('load', function ()
+	{
+		$.each($('input[type=date]'), (index, datebox) =>
+			{
+				datebox.style.color = (datebox.value) ? 'black' : 'white';
+			}
+		);
+	}
+);
+
+$(function ()
+	{
+		// フォーカス取得時は入力用にいったん色を付ける
+		$('input[type=date]').focus(function (event)
+			{
+				this.style.color = 'black';
+			}
+		);
+
+		// フォーカス喪失後の文字色変更
+		$('input[type=date]').blur(function (event)
+			{
+				this.style.color = (this.value) ? 'black' : 'white';
+			}
+		);
+	}
+);
