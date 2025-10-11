@@ -10,19 +10,19 @@ $(function() {
 
 
 // セクションフェードイン
-jQuery(function ($) {
-	const fadeIn = $('.fade-in');
-	$(window).scroll(function () {
-		$(fadeIn).each(function () {
-			const offset = $(this).offset().top;
-			const scroll = $(window).scrollTop();
-			const windowHeight = $(window).height();
-			if (scroll > offset - windowHeight + 150) {
-				$(this).addClass("scroll-in");
-			}
-		});
-	});
-});
+// jQuery(function ($) {
+// 	const fadeIn = $('.fade-in');
+// 	$(window).scroll(function () {
+// 		$(fadeIn).each(function () {
+// 			const offset = $(this).offset().top;
+// 			const scroll = $(window).scrollTop();
+// 			const windowHeight = $(window).height();
+// 			if (scroll > offset - windowHeight + 150) {
+// 				$(this).addClass("scroll-in");
+// 			}
+// 		});
+// 	});
+// });
 
 
 // 初期表示時の文字色変更
@@ -53,3 +53,28 @@ $(function ()
 		);
 	}
 );
+
+
+// トリガー取得
+const scrollTrigger = document.querySelectorAll('.js-scroll-trigger');
+
+// aimation呼び出し
+if (scrollTrigger.length) {
+    scrollAnimation(scrollTrigger);
+}
+
+// aimation関数
+function scrollAnimation(trigger) {
+    window.addEventListener('scroll', function () {
+        for (var i = 0; i < trigger.length; i++) {
+            let position = trigger[i].getBoundingClientRect().top,
+                scroll = window.pageYOffset || document.documentElement.scrollTop,
+                offset = position + scroll,
+                windowHeight = window.innerHeight;
+
+            if (scroll > offset - windowHeight + 200) {
+                trigger[i].classList.add('is-active');
+            }
+        }
+    });
+}
